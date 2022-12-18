@@ -1,0 +1,56 @@
+polus.hpc.cs.msu.ru
+edu-cmc-skmodel22-614-10
+--------------------------------------------------------
+source /polusfs/setenv/setup.SMPI
+source /polusfs/setenv/setup.OpenMPI
+--------------------------------------------------------
+module load SpectrumMPI
+module load OpenMPI
+--------------------------------------------------------
+bjobs
+bjobs -u all
+bkill job_id
+bkill 0
+--------------------------------------------------------
+cd task3
+cd mpi_program
+cd openmp_program
+--------------------------------------------------------
+
+【task3_serial】
+compile: g++ serial_task3.cpp -o serial_task3
+run: ./serial_task3 500 500
+
+---------------------------------------------------------------------------------------------------------------------
+【task3_mpi】
+compile: mpic++ -std=c++11 task3_mpi.cpp -o task3_mpi -O3 
+run: mpirun -n 4 task3_mpi 500 500
+
+submit: 
+mpisubmit.pl -p 4 -w 00:20 --stdout ./mpi_output/p4_1511_500_500.out task3_mpi 500 500
+mpisubmit.pl -p 8 -w 00:15 --stdout ./mpi_output/p8_1511_500_500.out task3_mpi 500 500
+mpisubmit.pl -p 16 -w 00:10 --stdout ./mpi_output/p16_1511_500_500.out task3_mpi 500 500
+mpisubmit.pl -p 32 -w 00:10 --stdout ./mpi_output/p32_1511_500_500.out task3_mpi 500 500
+
+mpisubmit.pl -p 4 -w 00:20 --stdout ./mpi_output/p4_1511_500_1000.out task3_mpi 500 1000
+mpisubmit.pl -p 8 -w 00:15 --stdout ./mpi_output/p8_1511_500_1000.out task3_mpi 500 1000
+mpisubmit.pl -p 16 -w 00:10 --stdout ./mpi_output/p16_1511_500_1000.out task3_mpi 500 1000
+mpisubmit.pl -p 32 -w 00:10 --stdout ./mpi_output/p32_1511_500_1000.out task3_mpi 500 1000
+
+---------------------------------------------------------------------------------------------------------------------
+【task3_openmp】
+compile: mpic++ -std=c++11 task3_openmp.cpp -o task3_openmp -fopenmp -O3
+run: mpirun -n 4 task3_openmp 500 500
+
+submit: 
+1)
+vim hybrid_submit.lsf
+2)
+# BSUB -n 4
+# BSUB -W 00:30
+# BSUB -o "./omp_output/p4_t4_500_500.out"
+# BSUB -e "run.%J.err"
+OMP_NUM_THREADS=4
+mpiexec -n 4 ./task3_openmp 500 500 0.000007 4
+3)
+bsub < hybrid_submit.lsf

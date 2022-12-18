@@ -1,0 +1,116 @@
+Sender: LSF System <lsfadmin@polus-c2-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 999939: <# this file was automaticly created by mpisubmit.pl script for edu-cmc-skmodel22-614-10 #;source /polusfs/setenv/setup.SMPI;#BSUB -n 32;#BSUB -W 00:30;#BSUB -o ./mpi_output/p32_1530_500_1000.out;#BSUB -e task3_mpi.%J.err;OMP_NUM_THREADS=1 mpiexec task3_mpi 500 1000> in cluster <MSUCluster> Done
+
+Job <# this file was automaticly created by mpisubmit.pl script for edu-cmc-skmodel22-614-10 #;source /polusfs/setenv/setup.SMPI;#BSUB -n 32;#BSUB -W 00:30;#BSUB -o ./mpi_output/p32_1530_500_1000.out;#BSUB -e task3_mpi.%J.err;OMP_NUM_THREADS=1 mpiexec task3_mpi 500 1000> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skmodel22-614-10> in cluster <MSUCluster> at Sat Dec 17 15:34:21 2022
+Job was executed on host(s) <4*polus-c2-ib.bmc.hpc.cs.msu.ru>, in queue <short>, as user <edu-cmc-skmodel22-614-10> in cluster <MSUCluster> at Sat Dec 17 17:50:30 2022
+                            <9*polus-c4-ib.bmc.hpc.cs.msu.ru>
+                            <3*polus-c3-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-skmodel22-614/edu-cmc-skmodel22-614-10> was used as the home directory.
+</home_edu/edu-cmc-skmodel22-614/edu-cmc-skmodel22-614-10/task3/mpi_5e-6> was used as the working directory.
+Started at Sat Dec 17 17:50:30 2022
+Terminated at Sat Dec 17 18:00:48 2022
+Results reported at Sat Dec 17 18:00:48 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+# this file was automaticly created by mpisubmit.pl script for edu-cmc-skmodel22-614-10 #
+source /polusfs/setenv/setup.SMPI
+#BSUB -n 32
+#BSUB -W 00:30
+#BSUB -o ./mpi_output/p32_1530_500_1000.out
+#BSUB -e task3_mpi.%J.err
+OMP_NUM_THREADS=1 mpiexec task3_mpi 500 1000
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   9820.00 sec.
+    Max Memory :                                 1852 MB
+    Average Memory :                             1269.20 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              32
+    Max Threads :                                65
+    Run time :                                   187 sec.
+    Turnaround time :                            8787 sec.
+
+The output (if any) follows:
+
+Start solving... 
+
+n_iters = 1000 norm = 8.97463e-05
+n_iters = 2000 norm = 5.46627e-05
+n_iters = 3000 norm = 4.12275e-05
+n_iters = 4000 norm = 3.39183e-05
+n_iters = 5000 norm = 2.92488e-05
+n_iters = 6000 norm = 2.59712e-05
+n_iters = 7000 norm = 2.35226e-05
+n_iters = 8000 norm = 2.161e-05
+n_iters = 9000 norm = 2.00652e-05
+n_iters = 10000 norm = 1.87843e-05
+n_iters = 11000 norm = 1.76998e-05
+n_iters = 12000 norm = 1.67658e-05
+n_iters = 13000 norm = 1.59499e-05
+n_iters = 14000 norm = 1.52284e-05
+n_iters = 15000 norm = 1.45839e-05
+n_iters = 16000 norm = 1.4003e-05
+n_iters = 17000 norm = 1.34755e-05
+n_iters = 18000 norm = 1.29932e-05
+n_iters = 19000 norm = 1.25497e-05
+n_iters = 20000 norm = 1.21397e-05
+n_iters = 21000 norm = 1.17589e-05
+n_iters = 22000 norm = 1.14039e-05
+n_iters = 23000 norm = 1.10715e-05
+n_iters = 24000 norm = 1.07594e-05
+n_iters = 25000 norm = 1.04654e-05
+n_iters = 26000 norm = 1.01878e-05
+n_iters = 27000 norm = 9.92498e-06
+n_iters = 28000 norm = 9.67559e-06
+n_iters = 29000 norm = 9.43849e-06
+n_iters = 30000 norm = 9.21265e-06
+n_iters = 31000 norm = 8.99718e-06
+n_iters = 32000 norm = 8.79128e-06
+n_iters = 33000 norm = 8.59424e-06
+n_iters = 34000 norm = 8.40545e-06
+n_iters = 35000 norm = 8.22434e-06
+n_iters = 36000 norm = 8.05041e-06
+n_iters = 37000 norm = 7.88319e-06
+n_iters = 38000 norm = 7.72228e-06
+n_iters = 39000 norm = 7.5673e-06
+n_iters = 40000 norm = 7.41791e-06
+n_iters = 41000 norm = 7.27381e-06
+n_iters = 42000 norm = 7.13469e-06
+n_iters = 43000 norm = 7.00031e-06
+n_iters = 44000 norm = 6.87041e-06
+n_iters = 45000 norm = 6.74478e-06
+n_iters = 46000 norm = 6.6232e-06
+n_iters = 47000 norm = 6.50548e-06
+n_iters = 48000 norm = 6.39145e-06
+n_iters = 49000 norm = 6.28093e-06
+n_iters = 50000 norm = 6.17377e-06
+n_iters = 51000 norm = 6.06982e-06
+n_iters = 52000 norm = 5.96894e-06
+n_iters = 53000 norm = 5.87101e-06
+n_iters = 54000 norm = 5.7759e-06
+n_iters = 55000 norm = 5.68349e-06
+n_iters = 56000 norm = 5.59368e-06
+n_iters = 57000 norm = 5.50637e-06
+n_iters = 58000 norm = 5.42145e-06
+n_iters = 59000 norm = 5.33883e-06
+n_iters = 60000 norm = 5.25843e-06
+
+When M = 500, N = 1000, num_procs = 32:
+Number of iterations = 60969, error_norm = 4.99999e-06, eps = 5e-06.
+after 178.434 seconds, the problem is solved!
+
+
+PS:
+
+Read file <task3_mpi.999939.err> for stderr output of this job.
+
